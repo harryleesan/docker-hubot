@@ -1,0 +1,13 @@
+redis:
+  image: redis:3.0.5
+  container_name: redis
+
+hubot:
+  image: halosan/hubot:0.0.1
+  links:
+    - redis:brain
+  volumes:
+    - ./my-hubot/:/home/node/my-hubot/
+  env_file: .env
+  command: bin/hubot -a slack
+  container_name: hubot

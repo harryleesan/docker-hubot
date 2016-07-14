@@ -1,0 +1,5 @@
+my-hubot/node_modules
+my-hubot/.git
+my-hubot/.gitignore
+my-hubot/.DS_Store*
+my-hubot/.hubot_history
