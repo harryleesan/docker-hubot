@@ -1,10 +1,11 @@
 FROM node:6.3
 MAINTAINER Harry Lee
-LABEL version="0.0.2"
+LABEL version="0.0.3"
 
 RUN apt-get update && apt-get install -y \
     expect \
     openssh-client \
+    rsync \
 && apt-get clean && rm -rf /var/lib/opt/lists
 
 RUN useradd --create-home --shell /bin/bash node
