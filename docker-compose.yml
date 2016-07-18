@@ -3,7 +3,7 @@ redis:
   container_name: redis
 
 hubot:
-  image: halosan/hubot:0.0.1
+  image: halosan/hubot:0.0.4
   links:
     - redis:brain
   volumes:
